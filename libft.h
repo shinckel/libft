@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:12:23 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/01 18:29:00 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:20:10 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,10 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 /* <string.h> compare memory areas, same as strncmp but typecasting memory*/
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-/* <string.h> locate a substring in a string, returns a pointer to little[0]*/
+/* <string.h> locate a substring in a string, returns a pointer to big*/
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+/* <string.h> creates a dupplicate for the string passed as parameter*/
+char	*ft_strdup(const char *s);
 /* <stdlib.h> convert a string to an integer*/
 int		ft_atoi(const char *str);
 

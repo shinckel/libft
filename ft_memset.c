@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:27:11 by shinckel          #+#    #+#             */
-/*   Updated: 2022/10/31 13:52:46 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/03 14:44:48 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,11 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+/* <string.h> fill memory with a constant byte;
+ * writes len bytes of value c (converted to an unsigned char) to the string b;
+ * it retuns a pointer to its first argument (b);
+ * set a block of memory to a particular value (e.g.'a' in all array positions);
+ * (15)it has no associated data type, it can be typecasted to anything;
+ * (22)you can not deference a void pointer directly, you must typecast first;
+*/
