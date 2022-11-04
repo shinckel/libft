@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:12:23 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/03 12:20:10 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/03 19:31:45 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,11 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 /* <string.h> locate a substring in a string, returns a pointer to big*/
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-/* <string.h> creates a dupplicate for the string passed as parameter*/
+/* <string.h> creates a duplicate for the string passed as parameter*/
 char	*ft_strdup(const char *s);
 /* <stdlib.h> convert a string to an integer*/
 int		ft_atoi(const char *str);
+/* <stdlib.h> allocates memory and sets its bytes' values to 0*/
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
