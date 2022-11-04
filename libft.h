@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:12:23 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/03 19:31:45 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/04 14:43:05 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ char	*ft_strdup(const char *s);
 int		ft_atoi(const char *str);
 /* <stdlib.h> allocates memory and sets its bytes' values to 0*/
 void	*ft_calloc(size_t nmemb, size_t size);
+/* <non-standard> returns a substring from a string*/
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

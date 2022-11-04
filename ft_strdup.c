@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:02:49 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/03 13:15:50 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/04 14:27:38 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,3 @@ char	*ft_strdup(const char *s)
  * you must typecast malloc to (char *);
  * swapping two char pointers;
 */
-
-/*int	main(void)
-{
-	char	*dup;
-	char	arr1[] = "sofia";
-	dup = ft_strdup(arr1);
-	puts(dup);
-}*/

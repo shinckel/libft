@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:20:07 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/03 10:50:30 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/04 13:45:19 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (little == NULL || little[j] == '\0')
+	if (little[j] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
