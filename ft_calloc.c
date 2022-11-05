@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 18:37:28 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/03 19:38:02 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/05 15:15:27 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void	*ft_calloc(size_t count, size_t size)
  * if space is insufficient, alocation fails (returns NULL);
  * (15)(size_t nmemb)how many blocks, (size_t size) size of each block;
  * the content of these blocks will be zero initiated;
- * better to user malloc(faster) than calloc(just in cases zero initiated), 
+ * better to use malloc(faster) than calloc(just in cases zero initiated);
 */
