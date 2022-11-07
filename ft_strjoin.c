@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:09:04 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/07 15:32:00 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:44:20 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*aux;
 	size_t	i;
 	size_t	j;
 	size_t	len;
+	char	*aux;
 
-	i = 0;
-	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
 	i = ft_strlen(s1);
