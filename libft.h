@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:12:23 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/07 13:10:25 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:52:15 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 /* <non-standard> concatenates two strings*/
 char	*ft_strjoin(char const *s1, char const *s2);
+/* <non-standard> trims beginning and end of string with specific set of chars*/
+char	*ft_strtrim(char const *s1, char const *set);
 /* <non-standard> output a char to a file descriptor*/
 void	ft_putchar_fd(char c, int fd);
 /* <non-standard> output a string to a file descriptor*/
