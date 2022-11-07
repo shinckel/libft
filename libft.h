@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:12:23 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/04 14:43:05 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:10:25 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,15 @@ int		ft_atoi(const char *str);
 void	*ft_calloc(size_t nmemb, size_t size);
 /* <non-standard> returns a substring from a string*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+/* <non-standard> concatenates two strings*/
+char	*ft_strjoin(char const *s1, char const *s2);
+/* <non-standard> output a char to a file descriptor*/
+void	ft_putchar_fd(char c, int fd);
+/* <non-standard> output a string to a file descriptor*/
+void	ft_putstr_fd(char *s, int fd);
+/* <non-standard> output a string to a file descriptor, followed by a new line*/
+void	ft_putendl_fd(char *s, int fd);
+/* <non-standard> output a number to a file descriptor*/
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

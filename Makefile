@@ -16,7 +16,8 @@ ft_isprint ft_toupper ft_tolower ft_memset\
 ft_bzero ft_strlen ft_memcpy ft_memmove\
 ft_strlcpy ft_strlcat ft_strchr ft_strrchr\
 ft_strncmp ft_memchr ft_memcmp ft_strnstr ft_strdup\
-ft_calloc ft_atoi ft_substr\
+ft_calloc ft_atoi ft_substr ft_strjoin ft_putchar_fd\
+ft_putstr_fd ft_putendl_fd\
 	
 CC =gcc
 RM =rm -f
