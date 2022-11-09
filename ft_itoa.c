@@ -3,10 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+<<<<<<< HEAD
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:01:37 by shinckel          #+#    #+#             */
 /*   Updated: 2022/11/09 13:10:55 by shinckel         ###   ########.fr       */
+=======
+/*   By: sofiahinckeldias <sofiahinckeldias@stud    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/08 14:32:18 by sofiahincke       #+#    #+#             */
+/*   Updated: 2022/11/08 17:13:30 by sofiahincke      ###   ########.fr       */
+>>>>>>> 593c141ecd8592bae7cb58558facdcb5b6e953e6
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +22,11 @@
 static unsigned int	ft_number_size(int n)
 {
 	unsigned int	len;
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 593c141ecd8592bae7cb58558facdcb5b6e953e6
 	len = 0;
 	if (n == 0)
 		return (1);
@@ -62,6 +73,7 @@ char	*ft_itoa(int n)
  * n = the integer to convert;
  * it returns the string representing the integer, or NULL if allocation fails;
  * negative numbers must be handled;
+<<<<<<< HEAD
  * the first function solves the string len, the second how to assign each char;
  * (static unsigned int) every call changes the variable, so...;
  * ...it keeps the value updated until the execution is done;
@@ -69,5 +81,13 @@ char	*ft_itoa(int n)
  * divide it by ten for discovering how many decimals (len++);
  * (42)you must solve zero, negative and positive scenarios;
  * while n != 0, assign the remainder(modulo division) to the (len - 1)position;
+=======
+ * (static unsigned int)this function is special, every call changes the variable;
+ * ...so, it keeps the value update until the execution is done (its lifetime changes);
+ * (15)you must discover the nature of the number, so, the size for allocating bytes;
+ * if it is negative (len + 1), then divide it by ten for discovering how many decimals;
+ * (42)you must solve zero, negative and positive scenarios;
+ * while n != 0, assign the remainder (modulo division) to the (len - 1) index position;
+>>>>>>> 593c141ecd8592bae7cb58558facdcb5b6e953e6
  * so the code writes each int, transformed into char (+ '0'), in reverse order;
  */

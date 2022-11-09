@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: sofiahinckeldias <sofiahinckeldias@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:12:23 by shinckel          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/11/09 16:24:57 by shinckel         ###   ########.fr       */
+=======
+/*   Updated: 2022/11/08 17:14:04 by sofiahincke      ###   ########.fr       */
+>>>>>>> 593c141ecd8592bae7cb58558facdcb5b6e953e6
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +74,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 /* <non-standard> trims beginning and end of string with specific set of chars*/
 char	*ft_strtrim(char const *s1, char const *set);
+<<<<<<< HEAD
 /* <non-standard> splits a string using a char as parameter*/
 char	**ft_split(char const *s, char c);
+=======
+>>>>>>> 593c141ecd8592bae7cb58558facdcb5b6e953e6
 /* <non-standard> converts a number into a string*/
 char	*ft_itoa(int n);
 /* <non-standard> output a char to a file descriptor*/
