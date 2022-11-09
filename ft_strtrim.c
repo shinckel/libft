@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:47:33 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/07 18:21:30 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/09 22:09:58 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		len;
-	int		start;
-	int		end;
-	char	*aux;
+	size_t	start;
+	size_t	end;
+	size_t	len;
 
-	start = 0;
 	if (!s1 || !set)
 		return (NULL);
-	while (s1[start] == 32 || (s1[start] >= 9 && s1[start] <= 13))
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	end = ft_strlen(s1);
-	while (s1[end] == 32 || (s1[end] >= 9 && s1[end] <= 13))
+	while (s1[end] && ft_strchr(set, s1[end]))
 		end--;
-	len = end - start - 1;
-	aux = (char *)malloc(sizeof(char) * len);
-	if (!aux)
-		return (NULL);
-	aux = ft_substr(s1, start, len);
-	return (aux);
+	len = end - start + 1;
+	return (ft_substr(s1, start, len));
 }
 
-/* <non-standard> trims beginning and end of string with specific set of chars
+/* <non-standard> trims beginning and end of string with specific set of chars;
  * s1 = the string to be trimmed, set = reference set of characters to trim;
  * it returns the trimmed string(s1 copy), or NULL if the allocation fails;
- * s1 copy is made through malloc, with the characters specified in set;
+ * you must jump the established set, so I know where the string starts and ends;
+ * (25)strchr = locate character in string, returns pointer first occurrence;
+ * (30)the ft_substr will do the job of extracting the substring;
+ * if s = "xyavocadoz" and set = "xyz", output = "avocado";
  */
