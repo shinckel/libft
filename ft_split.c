@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:23:45 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/10 21:09:05 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:38:09 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ static int	word_count(char *s, char c)
 	return (words);
 }
 
-/* word_count = how many substrings are there inside the string s?
+/* word_count = how many substrings are there inside the string s?;
  * you must develop two differents counters, one for coutings the words...;
- * ... and other for jumping the separators and letters (i);
+ * ...and other for jumping the separators and letters (i);
  * (29)protection for when you reach the end of the string;
 */
 
@@ -55,9 +55,10 @@ static void	str_cpy(char *word, char *str, char c, int j)
 	word[i] = '\0';
 }
 
-/* str_cpy = how to copy the substring inside an allocated string?;
+/* str_cpy = how to copy the substring inside an allocated(malloc) string?;
  * (*word)pointer returned from str_alloc(dynamic allocation of memory);
- * inside this function you separate where(index) are the substrnings;
+ * inside this function you separate in which index are the substrings...;
+ * ...then, you copy these portions (word[i] = str[j + i]);
 */
 
 static char	*str_alloc(char *s, char c, int *k)
@@ -66,7 +67,6 @@ static char	*str_alloc(char *s, char c, int *k)
 	char	*word;
 
 	j = *k;
-	word = NULL;
 	while (s[*k])
 	{
 		if (s[*k] != c)
@@ -85,8 +85,9 @@ static char	*str_alloc(char *s, char c, int *k)
 }
 
 /* str_alloc = how to allocate memory for each string individually?;
- * the word pointer created here will then feed the str_cpy function;
+ * the *word pointer created here will then feed the str_cpy function;
  * you must copy the substrings directly on the *word allocated memory;
+ * (*k)store the position of each substring(for then copying each one); 
 */
 
 char	**ft_split(char const *s, char c)
@@ -107,7 +108,7 @@ char	**ft_split(char const *s, char c)
 	aux[end] = NULL;
 	while (start < end)
 	{
-		aux[start] = str_alloc(((char *)s), c, &pos);
+		aux[start] = str_alloc((char *)s, c, &pos);
 		start++;
 	}
 	return (aux);
@@ -118,7 +119,6 @@ char	**ft_split(char const *s, char c)
  * s = the string to be split, c = the delimiter character; 
  * it returns a pointer of a pointer(array of strings, 2D array on heap memory);
  * the array must end with a NULL pointer;
- * (pos)string position that you want to copy, it is a pointer for the index;
  * (start-end)first array index, pointing for each string of the list (e.g.argc);
  * (&pos)second array index, pointing for each char inside the string (e.g.argv);
  */
