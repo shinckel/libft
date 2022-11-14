@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:03:33 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/10 17:03:53 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/14 21:07:40 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 /* <ctype.h> convert char to lowercase*/
 int		ft_tolower(int c);
+
 /* <string.h> fill memory with a constant byte*/
 void	*ft_memset(void *b, int c, size_t len);
 /* <string.h> zero a byte string, it writes n zeroed bytes to the string s*/
@@ -60,10 +61,12 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 /* <string.h> creates a duplicate for the string passed as parameter*/
 char	*ft_strdup(const char *s);
+
 /* <stdlib.h> convert a string to an integer*/
 int		ft_atoi(const char *str);
 /* <stdlib.h> allocates memory and sets its bytes' values to 0*/
 void	*ft_calloc(size_t nmemb, size_t size);
+
 /* <non-standard> returns a substring from a string*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 /* <non-standard> concatenates two strings*/
@@ -74,6 +77,10 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 /* <non-standard> converts a number into a string*/
 char	*ft_itoa(int n);
+/*<non-standard> applies a function to each character of a string*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/* <non-standard> same as ft_strmapi, but without using malloc and none return*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 /* <non-standard> output a char to a file descriptor*/
 void	ft_putchar_fd(char c, int fd);
 /* <non-standard> output a string to a file descriptor*/
@@ -82,5 +89,19 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 /* <non-standard> output a number to a file descriptor*/
 void	ft_putnbr_fd(int n, int fd);
+
+/* t_list struct declaration, so you don't need to define it in each file*/
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+/* <linked list> creates a new list element*/
+t_list	*ft_lstnew(void *content);
+/* <linked list> adds an element at the beginning of a list*/
+void	ft_lstadd_front(t_list **lst, t_list *new);
+/* <linked list> counts the number of elements in a list*/
+int		ft_lstsize(t_list *lst);
 
 #endif
