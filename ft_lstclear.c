@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:31:11 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/16 19:20:35 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 14:59:23 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*aux;
 	t_list	*n;
 
+	if (!lst)
+		return ;
 	aux = *lst;
+	n = NULL;
 	while (aux != NULL)
 	{
 		n = aux->next;
@@ -41,8 +44,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
  * (aux)is the current node and (n)will be the temp for storing aux position;
  * (n)you have to store the address of the nodes somewhere...
  * ...so you can reach them even if the first node is deleted;
+ * (23)it means that n is pointing to nothing...you are just initializing it;
  * (26)...then update head as being the second node position(n = aux->next);
  * ...and delete every node, knowing that 'n' has the next position stored;
  * (26)at the last loop, aux will be equal to NULL (n = aux->next = NULL);
- * (28)here, (*lst = NULL) works too, as you must reasign *lst to NULL;
+ * (31)here, (*lst = NULL) works too, as you must reasign *lst to NULL;
  */

@@ -11,59 +11,29 @@
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ft_isalpha\
-	ft_isdigit\
-	ft_isalnum\
-	ft_isascii\
-	ft_isprint\
-	ft_toupper\
-	ft_tolower\
-	ft_memset\
-	ft_bzero\
-	ft_strlen\
-	ft_memcpy\
-	ft_memmove\
-	ft_strlcpy\
-	ft_strlcat\
-	ft_strchr\
-	ft_strrchr\
-	ft_strncmp\
-	ft_memchr\
-	ft_memcmp\
-	ft_strnstr\
-	ft_strdup\
-	ft_calloc\
-	ft_atoi\
-	ft_substr\
-	ft_strjoin\
-	ft_strtrim\
-	ft_split\
-	ft_itoa\
-	ft_strmapi\
-	ft_striteri\
-	ft_putchar_fd\
-	ft_putstr_fd\
-	ft_putendl_fd\
-	ft_putnbr_fd\
-	ft_lstnew\
-	ft_lstadd_front\
-	ft_lstsize\
-	ft_lstadd_back\
-	ft_lstdelone\
-	ft_lstclear\
+SRC = ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr\
+ft_memcmp ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr\
+ft_substr ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd\
+ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
+ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
+ft_strjoin ft_strtrim ft_strmapi ft_striteri ft_itoa ft_split\
+
+BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back\
+ft_lstdelone ft_lstclear ft_lstiter ft_lstmap\
 
 CC =gcc
 RM =rm -f
 CFLAGS = -Wall -Werror -Wextra -I.
-
-$(VERBOSE).SILENT:
 
 all:$(NAME)
 
 $(NAME): $(SRC:=.o)
 			ar rc $(NAME) $(SRC:=.o)
 clean:
-	$(RM)	$(SRC:=.o)
+	$(RM)	$(SRC:=.o) $(BONUS:=.o)
 fclean: clean
 		$(RM)	$(NAME)
 re:	fclean	$(NAME)
+
+bonus:	$(SRC:=.o)	$(BONUS:=.o)
+		ar rc $(NAME) $(SRC:=.o)	$(BONUS:=.o)

@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:13:28 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/16 17:35:19 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 17:37:45 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;
-	if (*lst != 0)
+	if (*lst != NULL)
 		new->next = *lst;
 	*lst = new;
 }
 
-/* <linked list> adds an element at the beginning of a list
+/* <linked list> adds an element(e.i.node) at the beginning of a list;
  * lst = the address of a pointer to the first link of a list; 
  * new = the address of a pointer to the node to be added to the list;
  * adds the node "new" at the begging of the list;
  * (18)no return, so it is empty (just as a break);
+ * (20)update the link part of *new(otherwise, it is NULL)...;
+ * (21)now, the *lst pointer needs to be linked to *new;
+ * important to keep this order, or you will loose the lst original position;
  */

@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 14:35:24 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/04 14:10:29 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 20:01:31 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 		i++;
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)s + i);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)s + i);
 		i--;
 	}
@@ -31,7 +31,8 @@ char	*ft_strrchr(const char *s, int c)
 }
 
 /* <string.h> locate character in string, last occurrence;
-the extra r stands for reverse, so I need the last position to countdown;
-(22) here this if statement needs to be solved first (string last character);
-(23) the syntax of "s + i" is equal to "s[i]"; 
+ * it is necessary to typecast both 's' and 'c'(so, they are comparable);
+ * the extra r stands for reverse, so you need the last position to countdown;
+ * (22) here this if statement needs to be solved first (string last character);
+ * (23) the syntax of "s + i" is equal to "s[i]"; 
 */

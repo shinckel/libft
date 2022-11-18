@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:08:12 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/10 17:11:29 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 21:19:41 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,8 @@ char	*ft_itoa(int n)
  * it returns the string representing the integer, or NULL if allocation fails;
  * negative numbers must be handled;
  * the first function solves the string len, the second how to assign each char;
- * (static unsigned int) every call changes the variable, so...;
- * ...it keeps the value updated until the execution is done;
- * (15)you must discover the nature of the number (size for allocating bytes);
- * divide it by ten for discovering how many decimals (len++);
- * (42)you must solve zero, negative and positive scenarios;
- * while n != 0, assign the remainder(modulo division) to the (len - 1)position;
- * (static unsigned int)it is special, every call changes the variable...;
- * ...so, it keeps the value updated until the execution is done;
+ * (static unsigned int)is a special variable, every call changes the value...;
+ * ...so, it keeps the variable updated until the execution is done;
  * (15)you must discover the nature of the number (size for allocating bytes);
  * divide it by ten for discovering how many decimal positions;
  * (42)you must solve zero, negative and positive scenarios;

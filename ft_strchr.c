@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:37:49 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/04 14:14:40 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 20:00:32 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)s);
 	return (0);
 }
 
 /* <string.h> locate character in string, first occurrence;
-(15)const char *s = string;
-(15)int c = here character means byte, this is the char I want to find;
-(20)here I need to typecast s, why? 
-(23)after running all string, if c is NULL, return the last char '\0';
-(25)NULL if the character is not found;
+ * it is necessary to typecast both 's' and 'c'(so, they are comparable);
+ * (15)const char *s = string;
+ * (15)int c = here character means byte, this is the char I want to find;
+ * (23)after running all string, if c is NULL, return the last char '\0';
+ * (25)NULL if the character is not found;
 */

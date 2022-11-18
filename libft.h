@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:03:33 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/16 17:23:59 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 19:31:27 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,23 +99,23 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-/* <linked list> creates a new list element*/
+/* <linked list> creates a new list's node*/
 t_list	*ft_lstnew(void *content);
-/* <linked list> adds an element at the beginning of a list*/
+/* <linked list> adds a node(new) at the beginning of the list(lst)*/
 void	ft_lstadd_front(t_list **lst, t_list *new);
-/* <linked list> counts the number of elements(nodes) in a list*/
+/* <linked list> counts the number of nodes inside a list*/
 int		ft_lstsize(t_list *lst);
-/* <linked list> */
+/* <linked list> returns the address of the last node of the list*/
 t_list	*ft_lstlast(t_list *lst);
-/* <linked list> adds an element at the end of a list*/
+/* <linked list> adds a node(new) at the end of the list(lst)*/
 void	ft_lstadd_back(t_list **lst, t_list *new);
 /* <linked list> frees the memory of node's content (through function 'del')*/
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 /* <linked list> deletes and free list, same as ft_lstdelone but here is **lst*/
 void	ft_lstclear(t_list **lst, void (*del)(void*));
-/* <linked list> */
+/* <linked list> applies a function to each node of a list*/
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-/* <linked list> */
+/* <linked list> same as lstiter, but creates and return a new list*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

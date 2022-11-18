@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 14:30:27 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/01 18:23:28 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 21:16:33 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ int	ft_atoi(const char *str)
 }
 
 /* <stdlib.h> convert a string to an integer;
- *(22)first, solve the space problem (jump it);
- *(24)then, turn the value of sign negative if the found symbol is minus;
- *(26)jump the symbol;
- *(28)when finding characters that correspond to numbers;
- *(30)transform it into integer(*str - '0') and add it to its decimal(res * 10);
- *(30)e.g."1234", 1000 + 200 + 30 + 4;
+ * (22)first, solve the space problem (jump it);
+ * (24)then, turn the value of sign negative if the found symbol is minus;
+ * (26)jump the symbol;
+ * (28)when finding characters that correspond to numbers;
+ * (30)transform it into integer(*str - '0') and add it to its decimal(res * 10);
+ * (30)e.g."1234", 1000 + 200 + 30 + 4;
  */

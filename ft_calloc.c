@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 18:37:28 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/05 15:15:27 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 20:04:14 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_calloc(size_t count, size_t size)
  * (difference one) initializes each block with a default value 0;
  * (difference two) it has two arguments (malloc has just one);
  * if space is insufficient, alocation fails (returns NULL);
- * (15)(size_t nmemb)how many blocks, (size_t size) size of each block;
+ * (15)(size_t count)how many blocks, (size_t size) size of each block;
  * the content of these blocks will be zero initiated;
  * better to use malloc(faster) than calloc(just in cases zero initiated);
 */

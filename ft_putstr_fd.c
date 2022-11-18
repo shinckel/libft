@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:26:48 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/07 12:59:00 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/18 21:00:10 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if (!s || !fd)
+	if (fd == -1)
+		return ;
+	if (!s)
 		return ;
 	while (s[i])
 	{
