@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:23:45 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/21 17:59:41 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:25:13 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,14 @@ char	**ft_split(char const *s, char c)
  * it returns a pointer of a pointer(array of strings, 2D array on heap memory);
  * the array must end with a NULL pointer;
  * (start-end)first array index, pointing for each string of the list (e.g.argc);
+ * (e.g.argv) is defined by ft_substr, allocating each substring char by char;
+ * (46)firt, allocate memory for the array of strings...;
+ * (53)important to reset i = 0,otherwise you loose the letter counting quality;
+ * (54)...then, jump the separators...;
+ * (56)...then, count the letters...;
+ * (58)...then, set the substring to the index(j = index start, i = substr len);
+ * (59)...jump the index (array of strings)...;
+ * (60)reset 'j' to the position after the substring (j += i); 
  */
 
 /*int main(void)
