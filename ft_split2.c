@@ -6,11 +6,13 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:57:18 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/21 18:00:31 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:04:22 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* this is a second version of ft_split (longer, no usage of ft_substr)*/
 
 static int	word_count(char *s, char c)
 {
@@ -115,7 +117,8 @@ char	**ft_split(char const *s, char c)
 }
 
 /* <non-standard> splits a string using a char as parameter;
- * how to allocate memory for the array of strings(size = 8 bytes)?;
+ * how to allocate memory for the array of strings(size = 8 bytes)?...;
+ * ...answer = (char **)malloc(sizeof(char *) * (end + 1));
  * s = the string to be split, c = the delimiter character; 
  * it returns a pointer of a pointer(array of strings, 2D array on heap memory);
  * the array must end with a NULL pointer;
