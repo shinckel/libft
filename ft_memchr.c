@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:12:54 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/18 20:05:14 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:15:38 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
  * (size_t n) it scans the initial n bytes of memory area; 
  * return a pointer to the matching byte or NULL if the char does not occur; 
  */
+
+/*int	main(void)
+{
+	int i = 0;
+	char arr[] = "sofiahdias@gmail.com";
+	char *domain = ft_memchr(arr, '@', 20);
+	printf("domain: %s\n", domain);
+	domain++;
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 15:41:52 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/21 20:18:03 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:14:06 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
  * (17)it compares until to find a difference between the strings;
  * if n reaches zero, it means that both strings are equal;
  */
+
+/*int	main(void)
+{
+	char	arr1[] = "sofia";
+	char	arr2[] = "soraia";
+	int	i = ft_strncmp(arr1, arr2, 4);
+
+	printf("Output: %i\n", i);
+	return(0);
+}*/

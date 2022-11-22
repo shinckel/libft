@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:22:19 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/03 18:28:56 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:10:46 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,21 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+/*int	main(void)
+{
+	int		i;
+	char	*dst;
+	char	*src;
+
+	i = 0;
+	dst[] = "soraia";
+	src[] = "jose";
+	ft_memcpy(dst, src, sizeof(char) * 4);
+	while (dst[i])
+	{
+		printf("%c", dst[i]);
+		i++;
+	}
+	printf("\n");
+}*/

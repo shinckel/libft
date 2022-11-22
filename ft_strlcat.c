@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 16:11:54 by sofiahincke       #+#    #+#             */
-/*   Updated: 2022/11/03 18:06:39 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:13:12 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
  * (24)room for the NULL should be included in dstsize (dstsize - 1);
  * (29)if dstsize is one, it guarantees my copy is NULL terminated;
  * (abort trap 6) if the destination doesn't have enough memory space;
-*/
+ */
+
+/*int	main(void)
+{
+	char	arr1[] = "Grocery list: ";
+	char	arr2[] = "banana, orange, grapes and cheese.";
+	int	dstsize = 59;
+	int r = ft_strlcat(arr1, arr2, dstsize);
+
+	puts(arr1);
+    printf("Value returned: %d\n", r);
+	if (r > dstsize)
+		puts("String truncated");
+	else
+		puts("String was fully copied");
+}*/

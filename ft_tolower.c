@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:40:14 by shinckel          #+#    #+#             */
-/*   Updated: 2022/10/31 13:48:15 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:15:08 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,10 @@ int	ft_tolower(int c)
 		return (c += 32);
 	return (c);
 }
+
+/*int	main(void)
+{
+	int c = 90;
+	printf("Output: %c\n", ft_tolower(c));
+	return (0);
+}*/

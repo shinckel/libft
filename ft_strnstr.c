@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:20:07 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/04 13:45:19 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:18:17 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
  * (35)if len is less than the size of little, return NULL;
  * (35)if little occurs nowhere in big, return NULL;
  */
+
+/*int main(void)
+{
+	char	arr1[] = "soofia";
+	char	arr2[] = "of";
+	char	*res = ft_strnstr(arr1, arr2, 5);
+	puts(res);
+	return (0);
+}*/

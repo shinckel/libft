@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:18:47 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/18 22:02:40 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:17:12 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
  * return(0) if both are equal;
  * return(1) if s1 is greater than s2;
  */
+
+/*int	main(void)
+{
+	char arr1[] = "soraia";
+	char arr2[] = "sofia";
+	int	i = ft_memcmp(arr1, arr2, 4);
+	printf("Output: %d\n", i);
+	return (0);
+}*/
