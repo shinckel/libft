@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:03:33 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/21 17:09:38 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/28 12:46:40 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,12 @@ void	ft_putendl_fd(char *s, int fd);
 /* <non-standard> output a number to a file descriptor*/
 void	ft_putnbr_fd(int n, int fd);
 
-/* t_list struct declaration, so you don't need to define it in each file*/
-/* content = assign data in first node, next = link to the next one...*/
-/* ...therefore, each node stores the data and the address of the next node*/
+/* t_list struct declaration, so you don't need to define it in each file;
+ * content = assign data in current node, next = link to the next one...;
+ * ...therefore, each node stores the data and the address of the next node;
+ *typedef= enables the user to create their own types(old type replaced by new);
+ *...so, s_list is replaced by t_list;
+ */
 typedef struct s_list
 {
 	void			*content;
