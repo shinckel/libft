@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:22:29 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/14 18:19:39 by shinckel         ###   ########.fr       */
+/*   Updated: 2022/11/28 12:43:09 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 /*char f(unsigned int i, char c)
 {
-	char str;
-	str = c + 1;
-	return (str);
+	(void) i;
+
+	c += 1;
+	return (c);
 }
 
 int main()
 {
 	char str1[] = "abc";
 	char* str2;
-	str2 = ft_strmapi(str1, *f);
+	str2 = ft_strmapi(str1, f);
 	printf("%s\n", str2);
 }*/
