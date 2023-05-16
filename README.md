@@ -78,7 +78,7 @@
  - (26)at the last loop, aux will be equal to NULL (n = aux->next = NULL);
  - (31)here, (*lst = NULL) works too, as you must reasign *lst to NULL;
 
- ##[ft_lstdelone.c](https://github.com/shinckel/libft42/blob/main/ft_lstdelone.c)
+ ## [ft_lstdelone.c](https://github.com/shinckel/libft42/blob/main/ft_lstdelone.c)
  - <linked list> frees the memory of node's content (through function 'del');
  - lst = the node to free, del = function address used to delete the content;
  - takes a node as parameter and frees the memory of its content using 'del';
