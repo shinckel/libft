@@ -68,7 +68,6 @@
  - so, it deletes the whole single list!(**lst);
  - finally, the pointer to the list must be set to NULL;
  - remember, just as **lst, head is a pointer of pointers(array);
-
  - first, you will need two variables to assist your code...;
  - (aux)is the current node and (n)will be the temp for storing aux position;
  - (n)you have to store the address of the nodes somewhere...
