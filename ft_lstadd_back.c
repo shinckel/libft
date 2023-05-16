@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:30:08 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/18 17:51:09 by shinckel         ###   ########.fr       */
+/*   Updated: 2023/05/16 14:13:23 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	aux = ft_lstlast(*lst);
 	aux->next = new;
 }
-
-/* <linked list> adds an element at the end of a list;
- * lst = the address of a pointer to the first link of the list;
- * new = the address of a pointer to the node to be added to the list;
- * adds the node "new" at the end of the list, return none;
- * (18)no return, so it is empty (just as a break);
- * (21)if the list is empty, 'new' will assume the position;
- * (27)unlike ft_lstadd_front, you don't need to assign *lst back(*lst = new);
- * ...because 'new' is the final node! so you must link it just once;
- */
