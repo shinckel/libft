@@ -1,4 +1,4 @@
-![Alt text](https://www.behance.net/gallery/169046459/Digital-drawing_Veneno-Radio-Station/modules/953652265)
+![veneno_poster1](https://github.com/shinckel/libft42commented/assets/115558344/86cde3e9-b28e-4a8b-8536-e0973902df5b)
 
 # Guidelines
 - This is a project from the 42 school. We had to create our own library from scratch, based on...;
