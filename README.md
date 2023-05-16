@@ -1,4 +1,4 @@
-![Alt text](https://www.behance.net/gallery/169046459/Digital-drawing_Veneno-Radio-Station)
+![Alt text](https://www.behance.net/gallery/169046459/Digital-drawing_Veneno-Radio-Station/modules/953652265)
 
 # Guidelines
 - This is a project from the 42 school. We had to create our own library from scratch, based on...;
