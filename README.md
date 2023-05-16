@@ -1,3 +1,5 @@
+![Alt text](https://www.behance.net/gallery/169046459/Digital-drawing_Veneno-Radio-Station)
+
 # Guidelines
 - This is a project from the 42 school. We had to create our own library from scratch, based on...;
 - My comments are organized by line of code (please, open the desired solution and check the comments with the correspondent line);  
