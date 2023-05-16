@@ -1,3 +1,5 @@
+![veneno_poster1](https://github.com/shinckel/libft42commented/assets/115558344/8a3d001b-c4d5-41cd-bf39-4c77a9268e36)
+
 # Guidelines
 - This is a project from the 42 school. We had to create our own library from scratch, based on...;
 - My comments are organized by line of code (please, open the desired solution and check the comments with the correspondent line);  
