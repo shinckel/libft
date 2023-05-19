@@ -13,7 +13,6 @@ In this project, you will be creating a library of functions. My comments are or
 - [`ft_isprint`](ft_isprint.c)	- checks for any printable character.
 - [`ft_toupper`](ft_toupper.c)	- convert char to uppercase.
 - [`ft_tolower`](ft_tolower.c)	- convert char to lowercase.
-***
 ### Functions from `<string.h>`
 
 - [`ft_memset`](ft_memset.c)	- fill memory with a constant byte.
@@ -30,17 +29,19 @@ In this project, you will be creating a library of functions. My comments are or
 - [`ft_memcmp`](ft_memcmp.c)	- compare memory areas.
 - [`ft_strnstr`](ft_strnstr.c)	- locate a substring in a string.
 - [`ft_strdup`](ft_strdup.c)	- creates a dupplicate for the string passed as parameter.
-***
 ### Functions from `<stdlib.h>`
 
 - [`ft_atoi`](ft_atoi.c)	- convert a string to an integer.
+```
 - (22)first, solve the space problem (jump it);
 - (24)then, turn the value of sign negative if the found symbol is minus;
 - (26)jump the symbol;
 - (28)when finding characters that correspond to numbers;
 - (30)transform it into integer(*str - '0') and add it to its decimal(res * 10);
 - (30)e.g."1234", 1000 + 200 + 30 + 4;
+```
 - [`ft_calloc`](ft_calloc.c)	- allocates memory and sets its bytes' values to 0.
+```
 - dynamic memory allocation change the size of a data structure in runtime;
 - calloc stands for contiguous allocation, it has two differences from malloc;
 - (difference one) initializes each block with a default value 0;
@@ -49,7 +50,7 @@ In this project, you will be creating a library of functions. My comments are or
 - (15)(size_t count)how many blocks, (size_t size) size of each block;
 - the content of these blocks will be zero initiated;
 - better to use malloc(faster) than calloc(just in cases zero initiated);
-***
+```
 ### Non-standard functions
 
 - [`ft_substr`](ft_substr.c)	- returns a substring from a string.
@@ -57,6 +58,7 @@ In this project, you will be creating a library of functions. My comments are or
 - [`ft_strtrim`](ft_strtrim.c)	- trims the beginning and end of string with specific set of chars.
 - [`ft_split`](ft_split.c)	- splits a string using a char as parameter.
 - [`ft_itoa`](ft_itoa.c)	- converts a number into a string.
+```
 - n = the integer to convert;
 - it returns the string representing the integer, or NULL if allocation fails;
 - negative numbers must be handled;
@@ -75,11 +77,13 @@ In this project, you will be creating a library of functions. My comments are or
 - [`ft_putstr_fd`](ft_putstr_fd.c)	- output a string to a file descriptor.
 - [`ft_putendl_fd`](ft_putendl_fd.c)	- output a string to a file descriptor, followed by a new line.
 - [`ft_putnbr_fd`](ft_putnbr_fd.c)	- output a number to a file descriptor.
+```
 ***
 ### Linked list functions
 
 - [`ft_lstnew`](ft_lstnew.c)	- creates a new list element.
 - [`ft_lstadd_front`](ft_lstadd_front.c)	- adds an element(e.i.node) at the beginning of a list.
+```
 - lst = the address of a pointer to the first link of a list; 
 - new = the address of a pointer to the node to be added to the list;
 - adds the node "new" at the begging of the list;
@@ -87,9 +91,11 @@ In this project, you will be creating a library of functions. My comments are or
 - (20)update the link part of *new(otherwise, it is NULL)...;
 - (21)now, the *lst pointer needs to be linked to *new;
 - important to keep this order, or you will loose the lst original position;
+```
 - [`ft_lstsize`](ft_lstsize.c)	- counts the number of elements in a list.
 - [`ft_lstlast`](ft_lstlast.c)	- returns the last element of the list.
 - [`ft_lstadd_back`](ft_lstadd_back.c)	- adds an element at the end of a list.
+```
 - lst = the address of a pointer to the first link of the list;
 - new = the address of a pointer to the node to be added to the list;
 - adds the node "new" at the end of the list, return none;
@@ -97,7 +103,9 @@ In this project, you will be creating a library of functions. My comments are or
 - (21)if the list is empty, 'new' will assume the position;
 - (27)unlike ft_lstadd_front, you don't need to assign *lst back(*lst = new);
 - ...because 'new' is the final node! so you must link it just once;
+```
 - [`ft_lstclear`](ft_lstclear.c)	- deletes and free list, same as ft_lstdelone but here is **lst.
+```
  - lst = the address of a pointer to a node;
  - del = the address of the function used to delete the content of the node;
  - return none, external function = void free(void *ptr);
@@ -114,9 +122,11 @@ In this project, you will be creating a library of functions. My comments are or
  - ...and delete every node, knowing that 'n' has the next position stored;
  - (26)at the last loop, aux will be equal to NULL (n = aux->next = NULL);
  - (31)here, (*lst = NULL) works too, as you must reasign *lst to NULL;
+ ```
 - [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list.
 - [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list.
 - [ft_lstdelone.c](ft_lstdelone.c) - frees the memory of node's content (through function 'del').
+```
  - lst = the node to free, del = function address used to delete the content;
  - takes a node as parameter and frees the memory of its content using 'del';
  - the memory of 'next' must not be freed;
@@ -124,5 +134,6 @@ In this project, you will be creating a library of functions. My comments are or
  - if there are more nodes = find the previous node of the one to be deleted;
  - ...change the 'next' of the previous node...;
  - ...free memory for the node to be deleted;
+ ```
 
 ![veneno_poster1](https://github.com/shinckel/libft42commented/assets/115558344/8a3d001b-c4d5-41cd-bf39-4c77a9268e36)
