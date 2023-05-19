@@ -71,14 +71,14 @@ In this project, you will be creating a library of functions. My comments are or
 - (42)you must solve zero, negative and positive scenarios;
 - while n != 0, assign the remainder(modulo division) to the (len - 1) position;
 - so the code writes each int, transformed into char (+ '0'), in reverse order;
+```
 - [`ft_strmapi`](ft_strmapi.c)	- applies a function to each character of a string.
 - [`ft_striteri`](ft_striteri.c)	- applies a function to each character of a string.
 - [`ft_putchar_fd`](ft_putchar_fd.c)	- output a char to a file descriptor.
 - [`ft_putstr_fd`](ft_putstr_fd.c)	- output a string to a file descriptor.
 - [`ft_putendl_fd`](ft_putendl_fd.c)	- output a string to a file descriptor, followed by a new line.
 - [`ft_putnbr_fd`](ft_putnbr_fd.c)	- output a number to a file descriptor.
-```
-***
+
 ### Linked list functions
 
 - [`ft_lstnew`](ft_lstnew.c)	- creates a new list element.
@@ -93,7 +93,13 @@ In this project, you will be creating a library of functions. My comments are or
 - important to keep this order, or you will loose the lst original position;
 ```
 - [`ft_lstsize`](ft_lstsize.c)	- counts the number of elements in a list.
-- [`ft_lstlast`](ft_lstlast.c)	- returns the last element of the list.
+- [`ft_lstlast`](ft_lstlast.c)	- returns the address of the last node of the list.
+```
+ - lst = the beginning of the list, the function returns the last list's node;
+ - (19)it will compare the addresses! so the loop will run until it finds NULL;
+ - (21)here you could add other line for adding a node to the end of the list;
+ - ...(lst->next = temp;) where temp is the address for another node;
+```
 - [`ft_lstadd_back`](ft_lstadd_back.c)	- adds an element at the end of a list.
 ```
 - lst = the address of a pointer to the first link of the list;
@@ -124,7 +130,29 @@ In this project, you will be creating a library of functions. My comments are or
  - (31)here, (*lst = NULL) works too, as you must reasign *lst to NULL;
  ```
 - [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list.
-- [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list.
+```
+ - lst = the address of a pointer to a node;
+ - f = the address of the function used to iterate on the list;
+ - return none, external functions none;
+ - iterates the list 'lst', applying function 'f' on the content of each node;
+ - traverse single linked list = visiting each node until the end node(NULL);
+ - (22)works just as i++, each time the loop runs it changes node's position;
+```
+- [`ft_lstmap`](ft_lstmap.c)	- same as lstiter, but creates and return a new list.
+```
+ - lst = the address of a pointer to a node;
+ - f = the address of the function used to iterate on the list;
+ - del = the address of the function used to delete the content of a node;
+ - it returns the new list, or NULL if allocation fails; 
+ - external functions permitted(malloc, free);
+ - creates a new list resulting of the successive application of 'f'...
+ - ...the 'del' function is used to delete the content of a node if needed;
+ - (21)don't forget: ft_lstnew needs one parameter of type content(lst->content);
+ - (27)recursive function = calls itself for creating the next nodes;
+ - or you can solve it with two variables(newlist = 0 and mem = ft_lstnew)...; 
+ - for creating the nodes and then sending it to 'newlist'(using ft_lstaddback);
+ - so 'newlist' is a blank canvas that receive nodes created through 'mem';
+```
 - [ft_lstdelone.c](ft_lstdelone.c) - frees the memory of node's content (through function 'del').
 ```
  - lst = the node to free, del = function address used to delete the content;
