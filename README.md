@@ -1,20 +1,46 @@
-![veneno_poster1](https://github.com/shinckel/libft42commented/assets/115558344/8a3d001b-c4d5-41cd-bf39-4c77a9268e36)
+# Libft Introduction
 
-# Guidelines
-- This is a project from the 42 school. We had to create our own library from scratch, based on...;
-- My comments are organized by line of code (please, open the desired solution and check the comments with the correspondent line);  
+In this project, you will be creating a library of functions. My comments are organized by line of code (please, open the desired solution and check the comments with the correspondent line).
 
-## [ft_atoi.c](https://github.com/shinckel/libft42commented/blob/main/ft_atoi.c)
-- <stdlib.h> convert a string to an integer;
+# Libft Functions
+
+### Functions from `<ctype.h>`
+
+- [`ft_isalpha`](ft_isalpha.c)	- checks  for  an  alphabetic  character.
+- [`ft_isdigit`](ft_isdigit.c)	- checks for a digit (0 through 9).
+- [`ft_isalnum`](ft_isalnum.c)	- checks for an alphanumeric character.
+- [`ft_isascii`](ft_isascii.c)	- checks whether c fits into the ASCII character set.
+- [`ft_isprint`](ft_isprint.c)	- checks for any printable character.
+- [`ft_toupper`](ft_toupper.c)	- convert char to uppercase.
+- [`ft_tolower`](ft_tolower.c)	- convert char to lowercase.
+***
+### Functions from `<string.h>`
+
+- [`ft_memset`](ft_memset.c)	- fill memory with a constant byte.
+- [`ft_strlen`](ft_strlen.c)	- calculate the length of a string.
+- [`ft_bzero`](ft_bzero.c)	- zero a byte string.
+- [`ft_memcpy`](ft_memcpy.c)	- copy memory area.
+- [`ft_memmove`](ft_memmove.c)	- copy memory area.
+- [`ft_strlcpy`](ft_strlcpy.c)	- copy string to an specific size.
+- [`ft_strlcat`](ft_strlcat.c)	- concatenate string to an specific size.
+- [`ft_strchr`](ft_strchr.c)	- locate character in string.
+- [`ft_strrchr`](ft_strrchr.c)	- locate character in string.
+- [`ft_strncmp`](ft_strncmp.c)	- compare two strings.
+- [`ft_memchr`](ft_memchr.c)	- scan memory for a character.
+- [`ft_memcmp`](ft_memcmp.c)	- compare memory areas.
+- [`ft_strnstr`](ft_strnstr.c)	- locate a substring in a string.
+- [`ft_strdup`](ft_strdup.c)	- creates a dupplicate for the string passed as parameter.
+***
+### Functions from `<stdlib.h>`
+
+- [`ft_atoi`](ft_atoi.c)	- convert a string to an integer.
 - (22)first, solve the space problem (jump it);
 - (24)then, turn the value of sign negative if the found symbol is minus;
 - (26)jump the symbol;
 - (28)when finding characters that correspond to numbers;
 - (30)transform it into integer(*str - '0') and add it to its decimal(res * 10);
 - (30)e.g."1234", 1000 + 200 + 30 + 4;
-
-## [ft_calloc.c](https://github.com/shinckel/libft42commented/blob/main/ft_calloc.c)
-- <stdlib.h> allocates memory and sets its bytes' values to 0;
+- [`ft_calloc`](ft_calloc.c)	- allocates memory and sets its bytes' values to 0.
 - dynamic memory allocation change the size of a data structure in runtime;
 - calloc stands for contiguous allocation, it has two differences from malloc;
 - (difference one) initializes each block with a default value 0;
@@ -23,9 +49,14 @@
 - (15)(size_t count)how many blocks, (size_t size) size of each block;
 - the content of these blocks will be zero initiated;
 - better to use malloc(faster) than calloc(just in cases zero initiated);
+***
+### Non-standard functions
 
-## [ft_itoa.c](https://github.com/shinckel/libft42/blob/main/ft_itoa.c)
-- <non-standard> converts a number into a string;
+- [`ft_substr`](ft_substr.c)	- returns a substring from a string.
+- [`ft_strjoin`](ft_strjoin.c)	- concatenates two strings.
+- [`ft_strtrim`](ft_strtrim.c)	- trims the beginning and end of string with specific set of chars.
+- [`ft_split`](ft_split.c)	- splits a string using a char as parameter.
+- [`ft_itoa`](ft_itoa.c)	- converts a number into a string.
 - n = the integer to convert;
 - it returns the string representing the integer, or NULL if allocation fails;
 - negative numbers must be handled;
@@ -38,19 +69,17 @@
 - (42)you must solve zero, negative and positive scenarios;
 - while n != 0, assign the remainder(modulo division) to the (len - 1) position;
 - so the code writes each int, transformed into char (+ '0'), in reverse order;
+- [`ft_strmapi`](ft_strmapi.c)	- applies a function to each character of a string.
+- [`ft_striteri`](ft_striteri.c)	- applies a function to each character of a string.
+- [`ft_putchar_fd`](ft_putchar_fd.c)	- output a char to a file descriptor.
+- [`ft_putstr_fd`](ft_putstr_fd.c)	- output a string to a file descriptor.
+- [`ft_putendl_fd`](ft_putendl_fd.c)	- output a string to a file descriptor, followed by a new line.
+- [`ft_putnbr_fd`](ft_putnbr_fd.c)	- output a number to a file descriptor.
+***
+### Linked list functions
 
-## [ft_lstadd_back.c](https://github.com/shinckel/libft42/blob/main/ft_lstadd_back.c) 
-- <linked list> adds an element at the end of a list;
-- lst = the address of a pointer to the first link of the list;
-- new = the address of a pointer to the node to be added to the list;
-- adds the node "new" at the end of the list, return none;
-- (18)no return, so it is empty (just as a break);
-- (21)if the list is empty, 'new' will assume the position;
-- (27)unlike ft_lstadd_front, you don't need to assign *lst back(*lst = new);
-- ...because 'new' is the final node! so you must link it just once;
-
-## [ft_lstadd_front.c](https://github.com/shinckel/libft42/blob/main/ft_lstadd_front.c)
-- <linked list> adds an element(e.i.node) at the beginning of a list;
+- [`ft_lstnew`](ft_lstnew.c)	- creates a new list element.
+- [`ft_lstadd_front`](ft_lstadd_front.c)	- adds an element(e.i.node) at the beginning of a list.
 - lst = the address of a pointer to the first link of a list; 
 - new = the address of a pointer to the node to be added to the list;
 - adds the node "new" at the begging of the list;
@@ -58,9 +87,17 @@
 - (20)update the link part of *new(otherwise, it is NULL)...;
 - (21)now, the *lst pointer needs to be linked to *new;
 - important to keep this order, or you will loose the lst original position;
-
-## [ft_lstclear.c](https://github.com/shinckel/libft42/blob/main/ft_lstclear.c)
-- <linked list> deletes and free list, same as ft_lstdelone but here is **lst;
+- [`ft_lstsize`](ft_lstsize.c)	- counts the number of elements in a list.
+- [`ft_lstlast`](ft_lstlast.c)	- returns the last element of the list.
+- [`ft_lstadd_back`](ft_lstadd_back.c)	- adds an element at the end of a list.
+- lst = the address of a pointer to the first link of the list;
+- new = the address of a pointer to the node to be added to the list;
+- adds the node "new" at the end of the list, return none;
+- (18)no return, so it is empty (just as a break);
+- (21)if the list is empty, 'new' will assume the position;
+- (27)unlike ft_lstadd_front, you don't need to assign *lst back(*lst = new);
+- ...because 'new' is the final node! so you must link it just once;
+- [`ft_lstclear`](ft_lstclear.c)	- deletes and free list, same as ft_lstdelone but here is **lst.
  - lst = the address of a pointer to a node;
  - del = the address of the function used to delete the content of the node;
  - return none, external function = void free(void *ptr);
@@ -77,9 +114,9 @@
  - ...and delete every node, knowing that 'n' has the next position stored;
  - (26)at the last loop, aux will be equal to NULL (n = aux->next = NULL);
  - (31)here, (*lst = NULL) works too, as you must reasign *lst to NULL;
-
- ## [ft_lstdelone.c](https://github.com/shinckel/libft42/blob/main/ft_lstdelone.c) <linked list>
- - "<linked list>" frees the memory of node's content (through function 'del');
+- [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list.
+- [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list.
+- [ft_lstdelone.c](ft_lstdelone.c) - frees the memory of node's content (through function 'del').
  - lst = the node to free, del = function address used to delete the content;
  - takes a node as parameter and frees the memory of its content using 'del';
  - the memory of 'next' must not be freed;
@@ -87,3 +124,5 @@
  - if there are more nodes = find the previous node of the one to be deleted;
  - ...change the 'next' of the previous node...;
  - ...free memory for the node to be deleted;
+
+![veneno_poster1](https://github.com/shinckel/libft42commented/assets/115558344/8a3d001b-c4d5-41cd-bf39-4c77a9268e36)
