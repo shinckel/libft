@@ -163,5 +163,3 @@ In this project, you will be creating a library of functions. My comments are or
  - ...change the 'next' of the previous node...;
  - ...free memory for the node to be deleted;
  ```
-
-![veneno_poster1](https://github.com/shinckel/libft42commented/assets/115558344/8a3d001b-c4d5-41cd-bf39-4c77a9268e36)
