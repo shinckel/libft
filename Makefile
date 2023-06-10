@@ -40,8 +40,8 @@ bonus: $(OBJ) $(BONUS_OBJ)
 clean:
 
 fclean: clean
-	@$(RM) $(OBJ) $(BONUS_OBJ) $(NAME)
-	@echo "$(RED) Remove .o files & $(NAME) $(RESET)"
+	$(RM) $(OBJ) $(BONUS_OBJ) $(NAME)
+	@echo "$(RED) Remove objects & $(NAME) $(RESET)"
 
 re: fclean all
 

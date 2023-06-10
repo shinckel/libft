@@ -1,9 +1,9 @@
-# Libft Introduction
-
-In this project, you will be creating a library of functions. My comments are organized by line of code (please, open the desired solution and check the comments with the correspondent line).
-
-# Libft Functions
-
+# Libft
+This project was developed for 42 school. For comprehensive information regarding the requirements, please consult the PDF file in the subject folder of the repository. Furthermore, I have provided my notes and a concise summary below.
+```diff
++ keywords: library
++ makefile
+```
 ### Functions from `<ctype.h>`
 
 - [`ft_isalpha`](ft_isalpha.c)	- checks  for  an  alphabetic  character.
