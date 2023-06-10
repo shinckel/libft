@@ -41,7 +41,7 @@ clean:
 
 fclean: clean
 	$(RM) $(OBJ) $(BONUS_OBJ) $(NAME)
-	@echo "$(RED) Remove .o files & name $(RESET)"
+	@echo "$(RED) Remove objects & $(NAME) $(RESET)"
 
 re: fclean all
 
