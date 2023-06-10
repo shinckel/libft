@@ -30,18 +30,18 @@ RESET := \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJ)
 	@echo "$(YELLOW) Libft compiled $(RESET)"
 
 bonus: $(OBJ) $(BONUS_OBJ)
-	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
+	@ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
 	@echo "$(YELLOW) Bonus compiled $(RESET)"
 
 clean:
 
 fclean: clean
-	$(RM) $(OBJ) $(BONUS_OBJ) $(NAME)
-	@echo "$(RED) Remove .o files & name $(RESET)"
+	@$(RM) $(OBJ) $(BONUS_OBJ) $(NAME)
+	@echo "$(RED) Remove .o files & $(NAME) $(RESET)"
 
 re: fclean all
 
