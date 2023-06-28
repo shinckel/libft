@@ -24,23 +24,23 @@ CFLAGS = -Wall -Werror -Wextra -Iheader -g
 
 # Define colors
 RED := \033[1;41m
-YELLOW := \033[1;103m
+GREEN := \033[1;42m
 RESET := \033[0m
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@echo "$(YELLOW) Libft compiled $(RESET)"
+	@echo "$(GREEN) Libft compiled $(RESET)"
 
 bonus: $(OBJ) $(BONUS_OBJ)
 	@ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
-	@echo "$(YELLOW) Bonus compiled $(RESET)"
+	@echo "$(GREEN) Bonus compiled $(RESET)"
 
 clean:
 
 fclean: clean
-	$(RM) $(OBJ) $(BONUS_OBJ) $(NAME)
+	@$(RM) $(OBJ) $(BONUS_OBJ) $(NAME)
 	@echo "$(RED) Remove objects & $(NAME) $(RESET)"
 
 re: fclean all
