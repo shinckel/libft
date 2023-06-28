@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 16:27:26 by shinckel          #+#    #+#             */
-/*   Updated: 2023/05/19 17:34:23 by shinckel         ###   ########.fr       */
+/*   Updated: 2023/06/28 10:09:18 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,10 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
+
+/*
+ * lst = the beginning of the list, the function returns the last list's node;
+ * (19)it will compare the addresses! so the loop will run until it finds NULL;
+ * (21)here you could add other line for adding a node to the end of the list;
+ * ...(lst->next = temp;) where temp is the address for another node;
+ */
