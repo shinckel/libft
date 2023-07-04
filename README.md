@@ -130,9 +130,9 @@ t_list *dummy_node() {
    i = 20;
    while (i < 30)
   {
-   push(&tail->next, i);
-   i++;
-   tail = tail->next;
+     push(&tail->next, i);
+     i++;
+     tail = tail->next;
   }
    return (dummy.next);
 }
