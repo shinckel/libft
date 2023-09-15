@@ -35,7 +35,7 @@ $(NAME): $(OBJ)
 
 bonus: $(OBJ) $(BONUS_OBJ)
 	@ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
-	@echo "$(GREEN) Bonus compiled $(RESET)"
+	@echo "$(GREEN) Libft & bonus compiled $(RESET)"
 
 clean:
 

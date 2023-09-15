@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoll.c                                         :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 12:23:00 by shinckel          #+#    #+#             */
-/*   Updated: 2023/08/05 12:23:26 by shinckel         ###   ########.fr       */
+/*   Updated: 2023/08/13 18:25:45 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
-long long	ft_atoll(const char *nptr)
+long	ft_atol(const char *str)
 {
-	size_t					i;
-	unsigned long long		nbr;
-	int						signe;
+	long	num;
+	int		isneg;
+	int		i;
 
+	num = 0;
+	isneg = 1;
 	i = 0;
-	nbr = 0;
-	signe = 1;
-	while (ft_isspace(nptr[i]))
+	while (str[i] && (str[i] == ' ' || str[i] == '\t'
+			|| str[i] == '\n' || str[i] == '\r'
+			|| str[i] == '\v' || str[i] == '\f'))
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if (nptr[i] == '-')
-			signe = -1;
+		isneg *= -1;
 		i++;
 	}
-	while (nptr[i] == '0')
-		i++;
-	while (ft_isdigit(nptr[i]))
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nbr = nbr * 10 + (nptr[i] - '0');
+		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
-	return (signe * nbr);
+	return (num * isneg);
 }

@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:03:33 by shinckel          #+#    #+#             */
-/*   Updated: 2022/11/28 12:46:40 by shinckel         ###   ########.fr       */
+/*   Updated: 2023/08/13 18:25:41 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,11 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 /* <string.h> creates a duplicate for the string passed as parameter*/
 char	*ft_strdup(const char *s);
-
 /* <stdlib.h> convert a string to an integer*/
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 /* <stdlib.h> allocates memory and sets its bytes' values to 0*/
 void	*ft_calloc(size_t nmemb, size_t size);
-
 /* <non-standard> returns a substring from a string*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 /* <non-standard> concatenates two strings*/
