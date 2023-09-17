@@ -63,7 +63,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(const char *s);
 
 /* <stdlib.h> convert a string to an integer*/
-int		ft_atoi(const char *str);
+int			ft_atoi(const char *str);
+long long	ft_atoll(const char *str);
 /* <stdlib.h> allocates memory and sets its bytes' values to 0*/
 void	*ft_calloc(size_t nmemb, size_t size);
 
