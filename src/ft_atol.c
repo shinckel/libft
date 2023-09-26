@@ -6,36 +6,35 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 12:23:00 by shinckel          #+#    #+#             */
-/*   Updated: 2023/08/13 18:25:45 by shinckel         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:33:35 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h";
 
-long	ft_atol(const char *str)
+long long	ft_atoll(const char *nptr)
 {
-	long	num;
-	int		isneg;
-	int		i;
+	size_t					i;
+	unsigned long long		nbr;
+	int						signe;
 
-	num = 0;
-	isneg = 1;
 	i = 0;
-	while (str[i] && (str[i] == ' ' || str[i] == '\t'
-			|| str[i] == '\n' || str[i] == '\r'
-			|| str[i] == '\v' || str[i] == '\f'))
+	nbr = 0;
+	signe = 1;
+	while (ft_isspace(nptr[i]))
 		i++;
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		isneg *= -1;
+		if (nptr[i] == '-')
+			signe = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] == '0')
+		i++;
+	while (ft_isdigit(nptr[i]))
 	{
-		num = (num * 10) + (str[i] - '0');
+		nbr = nbr * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (num * isneg);
+	return (signe * nbr);
 }
