@@ -6,11 +6,11 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 12:23:00 by shinckel          #+#    #+#             */
-/*   Updated: 2023/09/26 16:35:37 by shinckel         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:42:27 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
 long long	ft_atoll(const char *str)
 {
