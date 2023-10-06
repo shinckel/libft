@@ -23,8 +23,8 @@ CFLAGS = -Wall -Werror -Wextra -Iheader -g
 #CFLAGS += -fsanitize=address
 
 # Define colors
-RED := \033[1;41m
-GREEN := \033[1;42m
+RED := \033[1;30;41m
+GREEN := \033[1;30;42m
 RESET := \033[0m
 
 all: $(NAME)
